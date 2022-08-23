@@ -1,0 +1,7 @@
+.DS_Store
+
+# vim swap files
+*.sw[nop]
+
+# Swift Package Manager
+/.build
