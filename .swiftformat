@@ -1,0 +1,5 @@
+--disable wrapMultilineStatementBraces
+--enable isEmpty
+--header strip
+--commas always
+--indent 2
