@@ -5,3 +5,5 @@
 
 # Swift Package Manager
 /.build
+.swiftpm/xcode/xcuserdata
+*.xcuserstate

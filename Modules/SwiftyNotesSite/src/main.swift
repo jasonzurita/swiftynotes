@@ -5,15 +5,17 @@ let siteDirectory = FileManager.default.currentDirectoryPath + "/_site"
 let outputFilePath = siteDirectory + "/index.html"
 
 print("Generating site...")
-let html = generate() // This is a free function from this  module
-guard let fileHandle = FileHandle(forWritingAtPath: outputFilePath) else {
-  try? FileManager.default.createDirectory(atPath: siteDirectory,
-                                           withIntermediateDirectories: false,
-                                           attributes: nil)
-  try? html.write(toFile: outputFilePath, atomically: true, encoding: .utf8)
-  exit(1)
-}
+
+let html = renderHtml() // This is a free function from this  module
 
 if let data = html.data(using: .utf8) {
-  fileHandle.write(data)
+    do {
+        try data.write(to: URL(fileURLWithPath: outputFilePath), options: [])
+        print("Success!")
+    } catch {
+        print("[FAILURE] - Failed to write to: \(outputFilePath)")
+    }
+} else {
+    print("[FAILURE] - Failed to convert html to data")
+    exit(1)
 }
