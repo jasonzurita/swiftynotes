@@ -2,4 +2,4 @@
 --enable isEmpty
 --header strip
 --commas always
---indent 2
+--indent 4
