@@ -1,11 +1,11 @@
 public struct Body: HtmlProvider {
     public let html: HtmlNode
 
-    public init(attrs: [(String, String)] = [], @HtmlBuilder content: () -> [HtmlNode]) {
+    public init(attrs: [AttrType: String] = [:], @HtmlBuilder content: () -> [HtmlNode]) {
         html = .element("body", attrs: attrs, content())
     }
 
-    public init(attrs: [(String, String)], nodes: [HtmlNode]) {
+    public init(attrs: [AttrType: String], nodes: [HtmlNode]) {
         html = .element("body", attrs: attrs, nodes)
     }
 }
@@ -16,8 +16,26 @@ public extension Body {
         let result: Body
         switch html {
         case let .element(_, attrs: attrs, _, nodes):
+            var newAttrs = attrs
+            newAttrs[.style, default: ""] += "background: #\(color.hex);"
             result = Body(
-                attrs: attrs + [("style", "\"background: #\(color.hex);\"")],
+                attrs: newAttrs,
+                nodes: nodes
+            )
+        }
+        return result
+    }
+}
+
+public extension Body {
+    func font(_ font: Font) -> Body {
+        let result: Body
+        switch html {
+        case let .element(_, attrs: attrs, _, nodes):
+            var newAttrs = attrs
+            newAttrs[.style, default: ""] += "\(font.style);"
+            result = Body(
+                attrs: newAttrs,
                 nodes: nodes
             )
         }
