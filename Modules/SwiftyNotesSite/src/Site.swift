@@ -11,6 +11,7 @@ func renderHtml() -> String {
                 }
             }
             .background(.gray)
+            .font(.apple)
         }
     return site.html.render
 }
