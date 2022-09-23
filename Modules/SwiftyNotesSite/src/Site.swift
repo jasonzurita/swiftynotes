@@ -4,7 +4,11 @@ func renderHtml() -> String {
     let site =
         Html {
             Body {
-                H1("let hello = \"world\"")
+                Header {
+                    H1("let hello = \"world\"")
+                }
+                .padding([.bottom], 50)
+
                 P("Built using a Swift HTML result builder.")
                 P("This site is ") {
                     A(copy: "open source.", url: "https://github.com/jasonzurita/swiftynotes")
