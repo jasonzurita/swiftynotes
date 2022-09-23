@@ -1,5 +1,3 @@
-
-
 public enum HtmlNode {
     indirect case element(
         String,
