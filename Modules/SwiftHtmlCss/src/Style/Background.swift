@@ -15,5 +15,6 @@ public enum Background {
             self.second = second
         }
     }
+
     case linearGradient(LinearGradient)
 }

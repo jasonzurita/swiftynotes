@@ -48,13 +48,13 @@ public extension Header {
             switch background {
             case let .linearGradient(lg):
                 newAttrs[.style, default: ""] +=
-                """
-                background: linear-gradient(\
-                \(lg.degree)deg,\
-                #\(lg.first.0.hex) \(lg.first.1)%,\
-                #\(lg.second.0.hex) \(lg.second.1)%\
-                );
-                """
+                    """
+                    background: linear-gradient(\
+                    \(lg.degree)deg,\
+                    #\(lg.first.0.hex) \(lg.first.1)%,\
+                    #\(lg.second.0.hex) \(lg.second.1)%\
+                    );
+                    """
                 result = Header(
                     attrs: newAttrs,
                     nodes: nodes

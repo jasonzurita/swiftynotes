@@ -38,7 +38,6 @@ public extension Body {
     func margin(_ value: Double) -> Body {
         margin(PaddingSide.all, value)
     }
-
 }
 
 // TODO: test for this
