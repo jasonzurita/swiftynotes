@@ -3,6 +3,7 @@ import Foundation
 public enum PaddingSide: CaseIterable {
     case top, bottom, leading, trailing
 
+    // TODO: does this need to be a set?
     public static var all: Set<PaddingSide> = [.top, .bottom, .leading, .trailing]
 
     var style: String {
