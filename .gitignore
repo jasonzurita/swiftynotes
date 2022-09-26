@@ -7,3 +7,4 @@
 /.build
 .swiftpm/xcode/xcuserdata
 *.xcuserstate
+*.xcworkspacedata
