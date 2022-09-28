@@ -19,7 +19,7 @@ public extension Header {
         switch html {
         case let .element(_, attrs: attrs, _, nodes):
             var newAttrs = attrs
-            if PaddingSide.all.isSubset(of: sides) {
+            if Set(PaddingSide.allCases).isSubset(of: sides) {
                 newAttrs[.style, default: ""] += "padding: \(value)px;"
             } else {
                 for side in sides {

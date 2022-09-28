@@ -32,7 +32,7 @@ final class UnitTests: XCTestCase {
 
     func testBodyWithAllMargins() {
             // given
-            let body = Body(attrs: [:], nodes: []).margin(PaddingSide.all, 7.1)
+            let body = Body(attrs: [:], nodes: []).margin(PaddingSide.allCases, 7.1)
 
             // when
             let rendered = body.html.render
