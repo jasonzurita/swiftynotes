@@ -61,10 +61,24 @@ final class BodyUnitTests: XCTestCase {
         assertSnapshot(matching: rendered, as: .lines)
     }
 
+    func testBodyWithTextAlignment() {
+        Alignment.allCases.forEach {
+            // given
+            let body = Body(attrs: [:], nodes: []).textAlign($0)
+
+            // when
+            let rendered = body.html.render
+
+            // then
+            assertSnapshot(matching: rendered, as: .lines)
+        }
+    }
+
     func testBodyWithMultipleStyles() {
         // given
         let body = Body(attrs: [:], nodes: [])
             .font(.apple)
+            .textAlign(.left)
             .background(.init(hex: "ASDFGH"))
             .margin(11)
 

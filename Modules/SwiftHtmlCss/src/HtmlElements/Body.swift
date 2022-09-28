@@ -69,3 +69,20 @@ public extension Body {
         return result
     }
 }
+
+public extension Body {
+    func textAlign(_ alignment: Alignment) -> Body {
+        let result: Body
+        switch html {
+        case let .element(_, attrs: attrs, _, nodes):
+            var newAttrs = attrs
+            // text-align:center;
+            newAttrs[.style, default: ""] += "text-align:\(alignment.rawValue);"
+            result = Body(
+                attrs: newAttrs,
+                nodes: nodes
+            )
+        }
+        return result
+    }
+}
