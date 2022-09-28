@@ -38,7 +38,6 @@ public extension Body {
     }
 }
 
-// TODO: test for this
 public extension Body {
     func background(_ color: Color) -> Body {
         let result: Body
