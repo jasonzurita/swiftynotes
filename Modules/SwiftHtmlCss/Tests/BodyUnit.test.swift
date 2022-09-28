@@ -1,7 +1,7 @@
 import Foundation
-import XCTest
-@testable import SwiftHtmlCss
 import SnapshotTesting
+@testable import SwiftHtmlCss
+import XCTest
 
 final class BodyUnitTests: XCTestCase {
     func testEmptyBody() {
@@ -29,14 +29,14 @@ final class BodyUnitTests: XCTestCase {
     }
 
     func testBodyWithAllMargins() {
-            // given
-            let body = Body(attrs: [:], nodes: []).margin(Side.allCases, 7.1)
+        // given
+        let body = Body(attrs: [:], nodes: []).margin(Side.allCases, 7.1)
 
-            // when
-            let rendered = body.html.render
+        // when
+        let rendered = body.html.render
 
-            // then
-            assertSnapshot(matching: rendered, as: .lines)
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
     }
 
     func testBodyWithBackground() {

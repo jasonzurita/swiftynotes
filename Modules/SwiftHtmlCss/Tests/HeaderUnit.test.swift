@@ -1,7 +1,7 @@
 import Foundation
-import XCTest
-@testable import SwiftHtmlCss
 import SnapshotTesting
+@testable import SwiftHtmlCss
+import XCTest
 
 final class HeaderUnitTests: XCTestCase {
     private let linearGradient: Background = .linearGradient(
@@ -37,14 +37,14 @@ final class HeaderUnitTests: XCTestCase {
     }
 
     func testHeaderWithAllPaddings() {
-            // given
-            let Header = Header(attrs: [:], nodes: []).padding(Side.allCases, 7.1)
+        // given
+        let Header = Header(attrs: [:], nodes: []).padding(Side.allCases, 7.1)
 
-            // when
-            let rendered = Header.html.render
+        // when
+        let rendered = Header.html.render
 
-            // then
-            assertSnapshot(matching: rendered, as: .lines)
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
     }
 
     func testHeaderWithBackground() {
