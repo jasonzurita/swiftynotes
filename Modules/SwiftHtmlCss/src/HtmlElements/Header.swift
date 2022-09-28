@@ -12,9 +12,8 @@ public struct Header: HtmlProvider {
     }
 }
 
-// TODO: test for this
 public extension Header {
-    func padding(_ sides: Set<Side>, _ value: Double) -> Header {
+    func padding(_ sides: [Side], _ value: Double) -> Header {
         let result: Header
         switch html {
         case let .element(_, attrs: attrs, _, nodes):
@@ -36,7 +35,6 @@ public extension Header {
     }
 }
 
-// TODO: test for this
 // TODO: combine with other background in "body"
 public extension Header {
     func background(_ background: Background) -> Header {

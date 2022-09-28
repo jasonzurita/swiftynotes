@@ -3,7 +3,7 @@ import XCTest
 @testable import SwiftHtmlCss
 import SnapshotTesting
 
-final class UnitTests: XCTestCase {
+final class BodyUnitTests: XCTestCase {
     func testEmptyBody() {
         // given
         let body = Body(attrs: [:], nodes: [])

@@ -1,0 +1,1 @@
+<header style="background: linear-gradient(77deg,#ASDFGH 4%,#QWERTY 99%);padding-right: 14.0px;padding-left: 14.0px;"></header>
