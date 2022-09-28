@@ -8,9 +8,8 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            name: "SnapshotTesting",
             url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
-            from: "1.9.0"
+            from: "1.10.0"
         ),
     ],
     targets: [
@@ -23,7 +22,7 @@ let package = Package(
             name: "SwiftHtmlCssTests",
             dependencies: [
                 "SwiftHtmlCss",
-                "SnapshotTesting",
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
             ],
             path: "Modules/SwiftHtmlCss/Tests",
             exclude: ["__Snapshots__"]
