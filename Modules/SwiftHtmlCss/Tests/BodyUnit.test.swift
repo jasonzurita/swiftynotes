@@ -15,10 +15,8 @@ final class UnitTests: XCTestCase {
         assertSnapshot(matching: rendered, as: .lines)
     }
 
-    // FIXME: This test exposed a bug in that the rendered form shows "padding". This needs to be fixed!
     func testBodyWithEachMargin() {
-        // All cases is used here to preserve the order for the test to be deterministic
-        PaddingSide.allCases.forEach {
+        Side.allCases.forEach {
             // given
             let body = Body(attrs: [:], nodes: []).margin([$0], 7.1)
 
@@ -32,7 +30,7 @@ final class UnitTests: XCTestCase {
 
     func testBodyWithAllMargins() {
             // given
-            let body = Body(attrs: [:], nodes: []).margin(PaddingSide.allCases, 7.1)
+            let body = Body(attrs: [:], nodes: []).margin(Side.allCases, 7.1)
 
             // when
             let rendered = body.html.render

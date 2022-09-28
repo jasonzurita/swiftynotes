@@ -10,19 +10,17 @@ public struct Body: HtmlProvider {
     }
 }
 
-// TODO: test for this
 public extension Body {
-    // TODO: rename PaddingSide to be more generic now that it is being reused here
-    func margin(_ sides: [PaddingSide], _ value: Double) -> Body {
+    func margin(_ sides: [Side], _ value: Double) -> Body {
         let result: Body
         switch html {
         case let .element(_, attrs: attrs, _, nodes):
             var newAttrs = attrs
-            if Set(PaddingSide.allCases).isSubset(of: sides) {
+            if Set(Side.allCases).isSubset(of: sides) {
                 newAttrs[.style, default: ""] += "margin: \(value)px;"
             } else {
                 for side in sides {
-                    newAttrs[.style, default: ""] += "\(side.style): \(value)px;"
+                    newAttrs[.style, default: ""] += "\(side.margin): \(value)px;"
                 }
             }
 
@@ -36,7 +34,7 @@ public extension Body {
 
     // Not sure why a default argument didn't work in the above function 🤷‍♂️
     func margin(_ value: Double) -> Body {
-        margin(PaddingSide.allCases, value)
+        margin(Side.allCases, value)
     }
 }
 

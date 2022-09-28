@@ -14,16 +14,16 @@ public struct Header: HtmlProvider {
 
 // TODO: test for this
 public extension Header {
-    func padding(_ sides: Set<PaddingSide>, _ value: Double) -> Header {
+    func padding(_ sides: Set<Side>, _ value: Double) -> Header {
         let result: Header
         switch html {
         case let .element(_, attrs: attrs, _, nodes):
             var newAttrs = attrs
-            if Set(PaddingSide.allCases).isSubset(of: sides) {
+            if Set(Side.allCases).isSubset(of: sides) {
                 newAttrs[.style, default: ""] += "padding: \(value)px;"
             } else {
                 for side in sides {
-                    newAttrs[.style, default: ""] += "\(side.style): \(value)px;"
+                    newAttrs[.style, default: ""] += "\(side.padding): \(value)px;"
                 }
             }
 
