@@ -17,6 +17,7 @@ func renderHtml() -> String {
                     A(copy: "open source.", url: "https://github.com/jasonzurita/swiftynotes")
                 }
             }
+            .textAlign(.center)
             .margin(0)
             .background(.gray)
             .font(.apple)
