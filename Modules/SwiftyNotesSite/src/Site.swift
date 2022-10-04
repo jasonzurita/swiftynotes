@@ -12,7 +12,7 @@ func renderHtml() -> String {
                     .linearGradient(.init(degree: 180, first: (.headerTopBlue, 0), second: (.headerBottomBlue, 100)))
                 )
 
-                P("Built using a Swift HTML result builder.")
+                P("Being built using an evolving Swift HTML result builder")
                 P("This site is ") {
                     A(copy: "open source.", url: "https://github.com/jasonzurita/swiftynotes")
                 }
