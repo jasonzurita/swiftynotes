@@ -14,4 +14,16 @@ final class ImageUnitTests: XCTestCase {
         // then
         assertSnapshot(matching: rendered, as: .lines)
     }
+
+    func testImageWithMargin() {
+        // given
+        let img = Img(src: "images/logo.png")
+            .margin(10)
+
+        // when
+        let rendered = img.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
+    }
 }
