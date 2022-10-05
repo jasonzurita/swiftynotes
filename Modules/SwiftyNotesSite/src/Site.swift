@@ -21,6 +21,7 @@ func renderHtml() -> String {
             .font(.apple)
             .textAlign(.center)
             .margin(0)
+            .padding(0)
         }
     return site.html.render
 }
