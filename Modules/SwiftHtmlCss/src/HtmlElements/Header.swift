@@ -12,29 +12,6 @@ public struct Header: HtmlProvider {
     }
 }
 
-public extension Header {
-    func padding(_ sides: [Side], _ value: Double) -> Header {
-        let result: Header
-        switch html {
-        case let .element(_, attrs: attrs, _, nodes):
-            var newAttrs = attrs
-            if Set(Side.allCases).isSubset(of: sides) {
-                newAttrs[.style, default: ""] += "padding: \(value)px;"
-            } else {
-                for side in sides {
-                    newAttrs[.style, default: ""] += "\(side.padding): \(value)px;"
-                }
-            }
-
-            result = Header(
-                attrs: newAttrs,
-                nodes: nodes
-            )
-        }
-        return result
-    }
-}
-
 // TODO: combine with other background in "body"
 public extension Header {
     func background(_ background: Background) -> Header {

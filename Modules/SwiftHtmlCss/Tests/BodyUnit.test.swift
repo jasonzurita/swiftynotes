@@ -39,6 +39,30 @@ final class BodyUnitTests: XCTestCase {
         assertSnapshot(matching: rendered, as: .lines)
     }
 
+    func testBodyWithEachPadding() {
+        Side.allCases.forEach {
+            // given
+            let body = Body(attrs: [:], nodes: []).padding([$0], 7.1)
+
+            // when
+            let rendered = body.html.render
+
+            // then
+            assertSnapshot(matching: rendered, as: .lines)
+        }
+    }
+
+    func testBodyWithAllPaddings() {
+        // given
+        let body = Body(attrs: [:], nodes: []).padding(7.1)
+
+        // when
+        let rendered = body.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
+    }
+
     func testBodyWithBackground() {
         // given
         let body = Body(attrs: [:], nodes: []).background(.init(hex: "ASDFGH"))
