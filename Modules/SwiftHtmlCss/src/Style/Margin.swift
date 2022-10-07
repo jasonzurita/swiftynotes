@@ -1,3 +1,7 @@
+// May need to be updated later to apply to select elements because
+// of the below spec note: https://www.w3.org/TR/CSS2/box.html#propdef-margin
+// Applies to: all elements except elements with table display types other than table-caption, table and inline-table
+
 public extension HtmlProvider {
     func margin(_ sides: [Side], _ value: Double) -> AnyElement {
         let result: AnyElement

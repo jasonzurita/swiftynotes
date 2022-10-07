@@ -1,3 +1,7 @@
+// May need to be updated later to apply to select elements because
+// of the below spec note: https://www.w3.org/TR/CSS2/box.html#padding-properties
+// Applies to: all elements except table-row-group, table-header-group, table-footer-group, table-row, table-column-group and table-column
+
 public extension HtmlProvider {
     func padding(_ sides: [Side], _ value: Double) -> AnyElement {
         let result: AnyElement
