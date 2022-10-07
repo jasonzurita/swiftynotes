@@ -6,7 +6,7 @@ import XCTest
 final class ImageUnitTests: XCTestCase {
     func testBasicImg() {
         // given
-        let img = Img(src: "images/logo.png")
+        let img = Img(src: "images/logo.png", alt: "alt required string")
 
         // when
         let rendered = img.html.render
@@ -17,7 +17,7 @@ final class ImageUnitTests: XCTestCase {
 
     func testImageWithMargin() {
         // given
-        let img = Img(src: "images/logo.png")
+        let img = Img(src: "images/logo.png", alt: "alt required string")
             .margin(10)
 
         // when
