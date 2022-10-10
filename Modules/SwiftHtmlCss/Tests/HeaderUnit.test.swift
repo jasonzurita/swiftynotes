@@ -14,10 +14,10 @@ final class HeaderUnitTests: XCTestCase {
 
     func testEmptyHeader() {
         // given
-        let Header = Header(attrs: [:], nodes: [])
+        let header = Header(attrs: [:], nodes: [])
 
         // when
-        let rendered = Header.html.render
+        let rendered = header.html.render
 
         // then
         assertSnapshot(matching: rendered, as: .lines)
@@ -26,10 +26,10 @@ final class HeaderUnitTests: XCTestCase {
     func testHeaderWithEachPadding() {
         Side.allCases.forEach {
             // given
-            let Header = Header(attrs: [:], nodes: []).padding([$0], 7.6)
+            let header = Header(attrs: [:], nodes: []).padding([$0], 7.6)
 
             // when
-            let rendered = Header.html.render
+            let rendered = header.html.render
 
             // then
             assertSnapshot(matching: rendered, as: .lines)
@@ -38,10 +38,10 @@ final class HeaderUnitTests: XCTestCase {
 
     func testHeaderWithAllPaddings() {
         // given
-        let Header = Header(attrs: [:], nodes: []).padding(Side.allCases, 7.1)
+        let header = Header(attrs: [:], nodes: []).padding(Side.allCases, 7.1)
 
         // when
-        let rendered = Header.html.render
+        let rendered = header.html.render
 
         // then
         assertSnapshot(matching: rendered, as: .lines)
@@ -49,10 +49,10 @@ final class HeaderUnitTests: XCTestCase {
 
     func testHeaderWithBackground() {
         // given
-        let Header = Header(attrs: [:], nodes: []).background(linearGradient)
+        let header = Header(attrs: [:], nodes: []).background(linearGradient)
 
         // when
-        let rendered = Header.html.render
+        let rendered = header.html.render
 
         // then
         assertSnapshot(matching: rendered, as: .lines)
@@ -60,12 +60,12 @@ final class HeaderUnitTests: XCTestCase {
 
     func testHeaderWithMultipleStyles() {
         // given
-        let Header = Header(attrs: [:], nodes: [])
+        let header = Header(attrs: [:], nodes: [])
             .background(linearGradient)
             .padding([.trailing, .leading], 14)
 
         // when
-        let rendered = Header.html.render
+        let rendered = header.html.render
 
         // then
         assertSnapshot(matching: rendered, as: .lines)
