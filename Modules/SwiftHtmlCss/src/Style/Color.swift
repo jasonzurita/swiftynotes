@@ -4,12 +4,13 @@ public extension HtmlProvider {
     func color(_ color: Color) -> AnyElement {
         let result: AnyElement
         switch html {
-        case let .element(element, attrs: attrs, _, nodes):
+        case let .element(element, attrs: attrs, copy, nodes):
             var newAttrs = attrs
             newAttrs[.style, default: ""] += "color: \(color.hex);"
             result = AnyElement(
                 element: element,
                 attrs: newAttrs,
+                copy: copy,
                 nodes: nodes
             )
         }

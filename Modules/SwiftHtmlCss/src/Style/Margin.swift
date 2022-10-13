@@ -6,7 +6,7 @@ public extension HtmlProvider {
     func margin(_ sides: [Side], _ value: Double) -> AnyElement {
         let result: AnyElement
         switch html {
-        case let .element(element, attrs: attrs, _, nodes):
+        case let .element(element, attrs: attrs, copy, nodes):
             var newAttrs = attrs
             if Set(Side.allCases).isSubset(of: sides) {
                 newAttrs[.style, default: ""] += "margin: \(value)px;"
@@ -19,6 +19,7 @@ public extension HtmlProvider {
             result = AnyElement(
                 element: element,
                 attrs: newAttrs,
+                copy: copy,
                 nodes: nodes
             )
         }
