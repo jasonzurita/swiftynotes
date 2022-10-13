@@ -105,6 +105,7 @@ final class BodyUnitTests: XCTestCase {
             .textAlign(.left)
             .background(.init(hex: "ASDFGH"))
             .margin(11)
+            .color(.init(hex: "asdfgh"))
 
         // when
         let rendered = body.html.render
