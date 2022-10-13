@@ -6,6 +6,8 @@ func renderHtml() -> String {
             Body {
                 Header {
                     H1("let hello = \"world\"")
+                        .padding([.top], 50)
+                        .color(.white)
                 }
                 .background(
                     .linearGradient(.init(degree: 180, first: (.headerTopBlue, 0), second: (.headerBottomBlue, 100)))
