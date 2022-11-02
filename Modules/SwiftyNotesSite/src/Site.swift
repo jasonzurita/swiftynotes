@@ -8,6 +8,7 @@ func renderHtml() -> String {
                 Header {
                     H1("let hello = \"world\"")
                         .padding([.top], 50)
+                    P("One minute Swift reads to get Swifty-er")
                         .color(.white)
                 }
                 .background(
