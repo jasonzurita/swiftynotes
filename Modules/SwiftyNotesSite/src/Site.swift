@@ -3,6 +3,7 @@ import SwiftHtmlCss
 func renderHtml() -> String {
     let site =
         Html {
+            Head(title: "SwiftyNotes")
             Body {
                 Header {
                     H1("let hello = \"world\"")
