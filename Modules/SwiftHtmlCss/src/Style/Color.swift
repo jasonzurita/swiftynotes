@@ -6,7 +6,7 @@ public extension HtmlProvider {
         switch html {
         case let .element(element, attrs: attrs, copy, nodes):
             var newAttrs = attrs
-            newAttrs[.style, default: ""] += "color: \(color.hex);"
+            newAttrs[.style, default: ""] += "color: #\(color.hex);"
             result = AnyElement(
                 element: element,
                 attrs: newAttrs,
