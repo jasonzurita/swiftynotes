@@ -7,9 +7,13 @@ func renderHtml() -> String {
             Body {
                 SiteHeader()
                 P("Being built using an evolving Swift HTML result builder")
-                P("This site is ") {
-                    A(copy: "open source.", url: "https://github.com/jasonzurita/swiftynotes")
+                Footer {
+                    P("This site is ") {
+                        A(copy: "open source.", url: "https://github.com/jasonzurita/swiftynotes")
+                    }
                 }
+                .textAlign(.center)
+                .color(.darkGray)
             }
             .background(.gray)
             .font(.apple)

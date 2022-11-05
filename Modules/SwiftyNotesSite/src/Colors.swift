@@ -5,6 +5,7 @@ import SwiftHtmlCss
 extension Color {
     static let white = Color(hex: "FFFFFF")
     static let gray = Color(hex: "F2F2F2")
+    static let darkGray = Color(hex: "8a8a8a")
     static let headerTopBlue = Color(hex: "459bd0a8")
     static let headerBottomBlue = Color(hex: "2F80ED")
 }
