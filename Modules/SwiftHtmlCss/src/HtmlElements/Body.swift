@@ -42,13 +42,13 @@ public extension Body {
     }
 }
 
+// https://www.w3.org/TR/CSS2/text.html#propdef-text-align
 public extension Body {
     func textAlign(_ alignment: Alignment) -> Body {
         let result: Body
         switch html {
         case let .element(_, attrs: attrs, _, nodes):
             var newAttrs = attrs
-            // text-align:center;
             newAttrs[.style, default: ""] += "text-align:\(alignment.rawValue);"
             result = Body(
                 attrs: newAttrs,
