@@ -8,3 +8,4 @@
 .swiftpm/xcode/xcuserdata
 *.xcuserstate
 *.xcworkspacedata
+*.orig
