@@ -43,6 +43,7 @@ public extension Body {
 }
 
 // https://www.w3.org/TR/CSS2/text.html#propdef-text-align
+// TODO: update this to apply to "Applies to:  block containers"
 public extension Body {
     func textAlign(_ alignment: Alignment) -> Body {
         let result: Body

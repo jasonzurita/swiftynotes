@@ -1,3 +1,5 @@
+import Swift
+
 public struct Footer: HtmlProvider {
     public let html: HtmlNode
 

@@ -17,6 +17,7 @@ public struct Div: HtmlProvider {
     }
 }
 
+// TODO: inline links
 public struct P: HtmlProvider {
     public var html: HtmlNode
 

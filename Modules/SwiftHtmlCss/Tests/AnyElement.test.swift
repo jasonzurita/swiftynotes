@@ -47,7 +47,7 @@ final class AnyElementTests: XCTestCase {
         // given
         let copy = "mic test"
         let element = P(copy)
-        // when
+            // when
             .color(.init(hex: "1234567"))
             .margin(1)
             .padding([.top], 0)
