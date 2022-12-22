@@ -8,4 +8,3 @@ public struct Head: HtmlProvider {
         html = .element("head", attrs: [:], [titleNode])
     }
 }
-
