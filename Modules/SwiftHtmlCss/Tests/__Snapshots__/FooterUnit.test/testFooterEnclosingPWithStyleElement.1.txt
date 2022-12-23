@@ -1,0 +1,3 @@
+<footer style="color: #123456;">
+     <p>Hi footer</p>
+</footer>

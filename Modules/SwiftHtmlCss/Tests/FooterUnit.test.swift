@@ -4,9 +4,9 @@ import SnapshotTesting
 import XCTest
 
 final class FooterUnitTests: XCTestCase {
-    func testEmptyBody() {
+    func testFooterElement() {
         // given
-        let footer = Footer(attrs: [:], nodes: [])
+        let footer = Footer {}
 
         // when
         let rendered = footer.html.render
@@ -15,24 +15,25 @@ final class FooterUnitTests: XCTestCase {
         assertSnapshot(matching: rendered, as: .lines)
     }
 
-    func testFooterWithTextAlignment() {
-        Alignment.allCases.forEach {
-            // given
-            let footer = Footer(attrs: [:], nodes: []).textAlign($0)
-
-            // when
-            let rendered = footer.html.render
-
-            // then
-            assertSnapshot(matching: rendered, as: .lines)
+    func testFooterEnclosingPElement() {
+        // given
+        let footer = Footer {
+            P("Hi footer")
         }
+
+        // when
+        let rendered = footer.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
     }
 
-    func testFooterWithMultipleStyles() {
+    func testFooterEnclosingPWithStyleElement() {
         // given
-        let footer = Footer(attrs: [:], nodes: [])
-            .textAlign(.center)
-            .color(.init(hex: "ASDFGH"))
+        let footer = Footer {
+            P("Hi footer")
+        }
+        .color(.init(hex: "123456"))
 
         // when
         let rendered = footer.html.render
