@@ -7,7 +7,15 @@ func renderHtml() -> String {
             Body {
                 SiteHeader()
                 Div {
-                    P("Being built using an evolving Swift HTML result builder")
+                    Div {
+                        P("Being built using an evolving Swift HTML result builder")
+                    }
+                    .background(.color(.darkGray))
+                    .color(.lightGray)
+                    .padding([.leading, .trailing], 24)
+                    .padding([.top, .bottom], 12)
+                    .margin([.bottom], 24)
+
                 }
                 .margin([.top], 48)
                 .maxWidth(percent: 80)
