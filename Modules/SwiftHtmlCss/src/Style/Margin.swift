@@ -30,4 +30,28 @@ public extension HtmlProvider {
     func margin(_ value: Double) -> AnyElement {
         margin(Side.allCases, value)
     }
+
+    // TODO: consider combining this with the px function and making auto into a general enum with associated value
+    func margin(_ sides: [Side], _: Auto) -> AnyElement {
+        let result: AnyElement
+        switch html {
+        case let .element(element, attrs: attrs, copy, nodes):
+            var newAttrs = attrs
+            if Set(Side.allCases).isSubset(of: sides) {
+                newAttrs[.style, default: ""] += "margin: auto;"
+            } else {
+                for side in sides {
+                    newAttrs[.style, default: ""] += "\(side.margin): auto;"
+                }
+            }
+
+            result = AnyElement(
+                element: element,
+                attrs: newAttrs,
+                copy: copy,
+                nodes: nodes
+            )
+        }
+        return result
+    }
 }
