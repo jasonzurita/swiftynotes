@@ -21,9 +21,9 @@ func renderHtml() -> String {
                 .textAlign(.center)
                 .color(.mediumGray)
             }
-            .background(.lightGray)
             .font(.apple)
             .textAlign(.center)
+            .background(.color(.lightGray))
             .margin(0)
             .padding(0)
         }
