@@ -65,7 +65,8 @@ final class BodyUnitTests: XCTestCase {
 
     func testBodyWithBackground() {
         // given
-        let body = Body(attrs: [:], nodes: []).background(.init(hex: "ASDFGH"))
+        let body = Body(attrs: [:], nodes: [])
+            .background(.color(.init(hex: "ASDFGH")))
 
         // when
         let rendered = body.html.render
@@ -103,7 +104,7 @@ final class BodyUnitTests: XCTestCase {
         let body = Body(attrs: [:], nodes: [])
             .font(.apple)
             .textAlign(.left)
-            .background(.init(hex: "ASDFGH"))
+            .background(.color(.init(hex: "ASDFGH")))
             .margin(11)
             .color(.init(hex: "asdfgh"))
 

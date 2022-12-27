@@ -1,0 +1,1 @@
+<fake-background-color-element style="background: #123456;"></fake-background-color-element>

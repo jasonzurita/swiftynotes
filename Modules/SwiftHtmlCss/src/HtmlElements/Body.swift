@@ -11,22 +11,6 @@ public struct Body: HtmlProvider {
 }
 
 public extension Body {
-    func background(_ color: Color) -> Body {
-        let result: Body
-        switch html {
-        case let .element(_, attrs: attrs, _, nodes):
-            var newAttrs = attrs
-            newAttrs[.style, default: ""] += "background: #\(color.hex);"
-            result = Body(
-                attrs: newAttrs,
-                nodes: nodes
-            )
-        }
-        return result
-    }
-}
-
-public extension Body {
     func font(_ font: Font) -> Body {
         let result: Body
         switch html {

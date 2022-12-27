@@ -1,5 +1,5 @@
 // TODO: should this be able to configure the style string itself?
-public enum Background {
+public enum BackgroundType {
     public struct LinearGradient {
         public typealias Percent = Int
         /// Informs the direction for the gradient
@@ -16,5 +16,6 @@ public enum Background {
         }
     }
 
+    case color(Color)
     case linearGradient(LinearGradient)
 }

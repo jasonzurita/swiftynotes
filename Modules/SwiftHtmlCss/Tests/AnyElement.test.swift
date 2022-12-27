@@ -4,6 +4,7 @@ import SnapshotTesting
 import XCTest
 
 final class AnyElementTests: XCTestCase {
+
     func testWidthStyle() {
         // given
         let element = AnyElement(element: "fake-element", attrs: [:], copy: "", nodes: [])
@@ -32,6 +33,36 @@ final class AnyElementTests: XCTestCase {
         // given
         let element = AnyElement(element: "fake-margin-auto-element", attrs: [:], copy: "", nodes: [])
             .margin([.leading, .top], .auto)
+
+        // when
+        let rendered = element.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
+    }
+
+    func testBackgroundColor() {
+        // given
+        let element = AnyElement(element: "fake-background-color-element", attrs: [:], copy: "", nodes: [])
+            .background(.color(.init(hex: "123456")))
+
+        // when
+        let rendered = element.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
+    }
+
+    func testBackgroundLinearGradient() {
+        // given
+        let gradient: BackgroundType.LinearGradient = .init(
+            degree: 77,
+            first: (.init(hex: "ASDFGH"), 4),
+            second: (.init(hex: "QWERTY"), 99)
+        )
+
+        let element = AnyElement(element: "fake-background-linear-gradient-element", attrs: [:], copy: "", nodes: [])
+            .background(.linearGradient(gradient))
 
         // when
         let rendered = element.html.render
