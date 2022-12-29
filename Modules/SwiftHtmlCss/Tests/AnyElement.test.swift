@@ -71,6 +71,18 @@ final class AnyElementTests: XCTestCase {
         assertSnapshot(matching: rendered, as: .lines)
     }
 
+    func testBorderRadius() {
+        // given
+        let element = AnyElement(element: "fake-border-radius-element", attrs: [:], copy: "", nodes: [])
+            .borderRadius(px: 16)
+
+        // when
+        let rendered = element.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
+    }
+
     func testMostGeneralStylesWithPElement() {
         // given
         let element = P("Super cool copy here")
