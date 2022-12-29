@@ -11,6 +11,7 @@ func renderHtml() -> String {
                         P("Being built using an evolving Swift HTML result builder")
                     }
                     .background(.color(.darkGray))
+                    .borderRadius(px: 32)
                     .color(.lightGray)
                     .padding([.leading, .trailing], 24)
                     .padding([.top, .bottom], 12)
