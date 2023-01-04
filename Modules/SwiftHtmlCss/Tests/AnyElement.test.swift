@@ -4,8 +4,8 @@ import SnapshotTesting
 import XCTest
 
 final class AnyElementTests: XCTestCase {
-
     // MARK: - Styles
+
     func testWidthStyle() {
         // given
         let element = AnyElement(element: "fake-element", attrs: [:], copy: "", nodes: [])

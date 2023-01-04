@@ -4,7 +4,6 @@ import SnapshotTesting
 import XCTest
 
 final class HeaderUnitTests: XCTestCase {
-
     func testEmptyHeader() {
         // given
         let header = Header(attrs: [:], nodes: [])

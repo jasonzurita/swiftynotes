@@ -1,4 +1,7 @@
+import Splash
 import SwiftHtmlCss
+
+// TODO: custom style guide for code
 
 func renderHtml() -> String {
     let site =
@@ -7,26 +10,15 @@ func renderHtml() -> String {
             Body {
                 SiteHeader()
                 Div {
-                    Div {
-                        Div {
-                            H1("Defining Constants and Variable")
-                            P("December 28, 2022")
-                                .color(.mediumGray)
-                        }
-                        .padding([.bottom], 8)
-                        .lineHeight(0.5)
-                        P("Constants and Variables need to start with the keyword \"let\" or \"var\" respectively.")
-                        P("Being built using an evolving Swift HTML result builder")
-                    }
-                    .textAlign(.left)
-                    .lineHeight(1.4)
-                    .background(.color(.darkGray))
-                    .borderRadius(px: 32)
-                    .color(.lightGray)
-                    .padding([.leading, .trailing], 24)
-                    .padding([.top, .bottom], 12)
-                    .margin([.bottom], 24)
-
+                    SiteNote(
+                        title: "Defining Constants and Variable",
+                        // TODO: make it this dynamic based on note date
+                        // TODO: look at date before making note public
+                        date: "January 4, 2023",
+                        body: "Constants and Variables need to start with the \"let\" and \"var\" keywords respectively. Constants cannot be changed after being set (immutable) while variables can be changed (mutable).",
+                        // TODO: make it so all notes are pulled in. Probably in the "main" file and we can bail if no notes are found
+                        sourceFileName: "2023_1_4-constants-and-variables.swift"
+                    )
                 }
                 .margin([.top], 48)
                 .maxWidth(percent: 80)

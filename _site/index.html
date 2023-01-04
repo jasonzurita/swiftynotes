@@ -1,94 +1,55 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>SwiftyNotes</title>
-		<meta name="description" content="Short articles and tips to learn the Swift programming language" />
-	</head>
-	<body style="margin: 0; padding: 0; font-family: -apple-system; text-align:center; background: #F2F2F2;">
-		<header style="padding-bottom: 50px; background: linear-gradient(180deg, #459bd0a8 0%, #2F80ED 100%);">
-			<div>
-				<img src="images/logo.svg" alt="SwiftyNotes" width="500px" style="vertical-align: middle; margin-top:50px" />
-				<p style="color: #FFFFFF;">One minute Swift reads to get Swifty-er</p>
-			</div>
-		</header>
-		<div style="margin-top: 48px; max-width: 80%; margin-left: auto; margin-right: auto;">
-			<div style="text-align:left; background: #333333; border-radius: 32px; line-height: 1.4;color: #F2F2F2; padding-left: 24px; padding-right: 24px; padding-top: 12px; padding-bottom: 12px; margin-bottom: 24px;">
-				<div style="line-height: 15px; padding-bottom: 8px;">
-					<h1>Defining Constants and Variables</h1>
-					<p style="color: #8A8A8A;">December 12, 2022</p>
-				</div>
+     <head>
+     <title>SwiftyNotes</title>
+     <link rel="stylesheet" href="Colors.css">
+</head>
+<body style="font-family: -apple-system;text-align: center;background: #F2F2F2;margin: 0.0px;padding: 0.0px;">
+     <header style="background: linear-gradient(180deg,#459bd0a8 0%,#2F80ED 100%);padding-bottom: 50.0px;">
+     <img alt="let hello = "world"" src="images/logo.svg" style="padding-top: 50.0px;" width="500.0px;"></img>
+<p style="color: #FFFFFF;">One minute Swift reads to get Swifty-er</p>
+</header>
+<div style="margin-top: 48.0px;max-width: 80.0%;margin-right: auto;margin-left: auto;">
+     <div style="text-align: left;line-height: 1.4;background: #333333;border-radius: 32.0px;color: #F2F2F2;padding-left: 24.0px;padding-right: 24.0px;padding-top: 12.0px;padding-bottom: 12.0px;margin-bottom: 24.0px;">
+     <div style="padding-bottom: 8.0px;line-height: 0.5;">
+     <h1>Defining Constants and Variable</h1>
+<p style="color: #8a8a8a;">January 4, 2023</p>
+</div>
+<p>Constants and Variables need to start with the "let" and "var" keywords respectively. Constants cannot be changed after being set (immutable) while variables can be changed (mutable).</p>
+<pre><code>
+<span class="comment">// Constant</span>
+<span class="keyword">let</span> name1 = <span class="string">"Swifty"</span>
+<span class="comment">// constantName = "SwiftyNotes" // &lt;- The Swift compiler won't allow this
 
-				<p>
-					Constants and Variables need to start with the keyword “let” or “var” respectively.
-				</p>
+// Variable</span>
+<span class="keyword">var</span> name2 = <span class="string">"Swifty"</span>
+<span class="keyword">func</span> makeFullName() {
+    name2 = <span class="string">"SwiftyNotes"</span> <span class="comment">// &lt;- Change the variable</span>
+}
+</code></pre>
+</div>
+     <div style="text-align: left;line-height: 1.4;background: #333333;border-radius: 32.0px;color: #F2F2F2;padding-left: 24.0px;padding-right: 24.0px;padding-top: 12.0px;padding-bottom: 12.0px;margin-bottom: 24.0px;">
+     <div style="padding-bottom: 8.0px;line-height: 0.5;">
+     <h1>Defining Constants and Variable</h1>
+<p style="color: #8a8a8a;">January 4, 2023</p>
+</div>
+<p>Constants and Variables need to start with the "let" and "var" keywords respectively. Constants cannot be changed after being set (immutable) while variables can be changed (mutable).</p>
+<pre><code>
+<span class="comment">// Constant</span>
+<span class="keyword">let</span> name1 = <span class="string">"Swifty"</span>
+<span class="comment">// constantName = "SwiftyNotes" // &lt;- The Swift compiler won't allow this
 
-				<p>
-					The Swift compiler won’t let you do this 👇
-					<br />
-					firstName = “Swifty” // ❌
-				</p>
-
-				<p>
-					Constants start with the “let” keyword, and can’t be changed after assigned to (they are immutable)
-					<br />
-					let firstName = “swifty”
-					<br />
-					firstName = “Notes” // ❌
-				</p>
-
-				<p>
-					Variables start with the “var” keyword, and can be changed after assigned to (they are mutable)
-					<br />
-					var lastName = “notes”
-				</p>
-
-				<p>
-					// We can change the variable now
-					<br />
-					lastName = “Notes”
-				</p>
-			</div>
-			<div style="text-align:left; background: #333333; border-radius: 32px; line-height: 1.4;color: #F2F2F2; padding-left: 24px; padding-right: 24px; padding-top: 12px; padding-bottom: 12px;">
-				<div style="line-height: 15px; padding-bottom: 8px;">
-					<h1>Defining Constants and Variables</h1>
-					<p style="color: #8A8A8A;">December 12, 2022</p>
-				</div>
-
-				<p>
-					Constants and Variables need to start with the keyword “let” or “var” respectively.
-				</p>
-
-				<p>
-					The Swift compiler won’t let you do this 👇
-					<br />
-					firstName = “Swifty” // ❌
-				</p>
-
-				<p>
-					Constants start with the “let” keyword, and can’t be changed after assigned to (they are immutable)
-					<br />
-					let firstName = “swifty”
-					<br />
-					firstName = “Notes” // ❌
-				</p>
-
-				<p>
-					Variables start with the “var” keyword, and can be changed after assigned to (they are mutable)
-					<br />
-					var lastName = “notes”
-				</p>
-
-				<p>
-					// We can change the variable now
-					<br />
-					lastName = “Notes”
-				</p>
-			</div>
-		</div>
-		<footer style="text-align:center; color: #8a8a8a">
-			<p>Flipping Leaf LLC © 2022 | Built using an evolving <a href="https://github.com/jasonzurita/swiftynotes">open source</a> Swift HTML result builder.</p>
-		</footer>
-	</body>
+// Variable</span>
+<span class="keyword">var</span> name2 = <span class="string">"Swifty"</span>
+<span class="keyword">func</span> makeFullName() {
+    name2 = <span class="string">"SwiftyNotes"</span> <span class="comment">// &lt;- Change the variable</span>
+}
+</code></pre>
+</div>
+</div>
+<footer style="text-align: center;color: #8a8a8a;">
+     <p>Jason Zurita &copy; 2022 | Built using an evolving Swift HTML result builder, which is
+     <a href="https://github.com/jasonzurita/swiftynotes">open source.</a>
+</p>
+</footer>
+</body>
 </html>
-

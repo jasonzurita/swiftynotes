@@ -30,9 +30,9 @@ final class DivUnitTests: XCTestCase {
     func testTextAlignment() {
         // given
         TextAlignment.allCases.forEach {
-            let element = Div{}
+            let element = Div {}
                 .textAlign($0)
-            
+
             // when
             let rendered = element.html.render
 
