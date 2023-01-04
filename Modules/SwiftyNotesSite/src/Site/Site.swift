@@ -8,8 +8,18 @@ func renderHtml() -> String {
                 SiteHeader()
                 Div {
                     Div {
+                        Div {
+                            H1("Defining Constants and Variable")
+                            P("December 28, 2022")
+                                .color(.mediumGray)
+                        }
+                        .padding([.bottom], 8)
+                        .lineHeight(0.5)
+                        P("Constants and Variables need to start with the keyword \"let\" or \"var\" respectively.")
                         P("Being built using an evolving Swift HTML result builder")
                     }
+                    .textAlign(.left)
+                    .lineHeight(1.4)
                     .background(.color(.darkGray))
                     .borderRadius(px: 32)
                     .color(.lightGray)
