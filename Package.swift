@@ -11,6 +11,7 @@ let package = Package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
             from: "1.10.0"
         ),
+        .package(url: "https://github.com/JohnSundell/Splash", from: "0.1.0"),
     ],
     targets: [
         .target(
@@ -31,6 +32,7 @@ let package = Package(
             name: "SwiftyNotesSite",
             dependencies: [
                 "SwiftHtmlCss",
+                "Splash",
             ],
             path: "Modules/SwiftyNotesSite/src"
         ),
