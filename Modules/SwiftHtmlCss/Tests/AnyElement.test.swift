@@ -4,6 +4,7 @@ import SnapshotTesting
 import XCTest
 
 final class AnyElementTests: XCTestCase {
+    // MARK: - Styles
 
     func testWidthStyle() {
         // given
@@ -75,6 +76,18 @@ final class AnyElementTests: XCTestCase {
         // given
         let element = AnyElement(element: "fake-border-radius-element", attrs: [:], copy: "", nodes: [])
             .borderRadius(px: 16)
+
+        // when
+        let rendered = element.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
+    }
+
+    func testLineHeight() {
+        // given
+        let element = AnyElement(element: "fake-line-height-element", attrs: [:], copy: "", nodes: [])
+            .lineHeight(2.3)
 
         // when
         let rendered = element.html.render
