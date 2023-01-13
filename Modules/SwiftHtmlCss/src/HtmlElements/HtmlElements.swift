@@ -9,7 +9,7 @@ public struct Html: HtmlProvider {
     }
 }
 
-public struct Div: HtmlProvider {
+public struct Div: BlockHtmlProvider {
     public let html: HtmlNode
 
     public init(@HtmlBuilder content: () -> [HtmlNode]) {
@@ -18,7 +18,7 @@ public struct Div: HtmlProvider {
 }
 
 // TODO: inline links
-public struct P: HtmlProvider {
+public struct P: BlockHtmlProvider {
     public var html: HtmlNode
 
     // Can we limit the elements that go in here?
@@ -27,7 +27,7 @@ public struct P: HtmlProvider {
     }
 }
 
-public struct H1: HtmlProvider {
+public struct H1: BlockHtmlProvider {
     public var html: HtmlNode
 
     public init(_ copy: String) {
@@ -35,7 +35,7 @@ public struct H1: HtmlProvider {
     }
 }
 
-public struct H2: HtmlProvider {
+public struct H2: BlockHtmlProvider {
     public let html: HtmlNode
 
     public init(_ copy: String) {

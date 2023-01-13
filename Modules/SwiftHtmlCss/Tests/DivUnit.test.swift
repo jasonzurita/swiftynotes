@@ -26,4 +26,18 @@ final class DivUnitTests: XCTestCase {
         // then
         assertSnapshot(matching: rendered, as: .lines)
     }
+
+    func testTextAlignment() {
+        // given
+        TextAlignment.allCases.forEach {
+            let element = Div {}
+                .textAlign($0)
+
+            // when
+            let rendered = element.html.render
+
+            // then
+            assertSnapshot(matching: rendered, as: .lines)
+        }
+    }
 }

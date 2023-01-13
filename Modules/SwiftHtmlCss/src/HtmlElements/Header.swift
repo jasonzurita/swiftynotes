@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Header: HtmlProvider {
+public struct Header: BlockHtmlProvider {
     public let html: HtmlNode
 
     public init(attrs: [AttrType: String] = [:], @HtmlBuilder content: () -> [HtmlNode]) {
