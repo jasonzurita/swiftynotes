@@ -3,7 +3,7 @@ import SwiftHtmlCss
 func renderHtml() -> String {
     let site =
         Html {
-            Head(title: "SwiftyNotes")
+            Head(title: "SwiftyNotes", cssStyleFileName: "")
             Body {
                 SiteHeader()
                 Div {
