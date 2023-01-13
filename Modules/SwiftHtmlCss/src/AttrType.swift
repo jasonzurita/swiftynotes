@@ -1,3 +1,3 @@
 public enum AttrType: String {
-    case style, src, alt, href, width
+    case style, src, alt, href, width, rel
 }
