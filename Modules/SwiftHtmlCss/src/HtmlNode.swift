@@ -15,6 +15,11 @@ public extension HtmlNode {
             return """
             <\(el)\(attributes)>\(copy)</\(el)>
             """
+        case let .element(el, attrs: attrs, _, nested) where ["pre", "code"].contains(el):
+            let attributes = attrs.isEmpty ? "" : " \(attrs.map { "\($0.0)=\"\($0.1)\"" }.sorted().joined(separator: " "))"
+            return """
+            <\(el)\(attributes)>\(nested.map(\.render).joined(separator: "\n"))</\(el)>
+            """
         case let .element(el, attrs: attrs, copy, nested):
             let attributes = attrs.isEmpty ? "" : " \(attrs.map { "\($0.0)=\"\($0.1)\"" }.sorted().joined(separator: " "))"
             return """

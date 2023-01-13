@@ -15,6 +15,19 @@ final class DivUnitTests: XCTestCase {
         assertSnapshot(matching: rendered, as: .lines)
     }
 
+    func testDivWithNestedElement() {
+        // given
+        let div = Div {
+            P("I am nested :)")
+        }
+
+        // when
+        let rendered = div.html.render
+
+        // then
+        assertSnapshot(matching: rendered, as: .lines)
+    }
+
     func testDivWithMaxWidth() {
         // given
         let div = Div {}
