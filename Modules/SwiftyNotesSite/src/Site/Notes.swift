@@ -15,7 +15,7 @@ struct SiteNotes: HtmlProvider {
         html =
         Div {
             SiteNote(
-                title: "Defining Constants and Variable",
+                title: "Defining Constants and Variables",
                 // TODO: make it this dynamic based on note date
                 // TODO: look at date before making note public
                 date: "January 13, 2023",
