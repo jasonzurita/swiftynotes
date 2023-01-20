@@ -9,8 +9,8 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
-        let codeSnippet = codeSnippet(withName: "2023_1_13-constants-and-variables.swift")
 
+        let codeSnippet1 = codeSnippet(withName: "2023_1_13_constants_and_variables.swift")
         // TODO: where should the title and body live?
         html =
         Div {
@@ -20,7 +20,7 @@ struct SiteNotes: HtmlProvider {
                 // TODO: look at date before making note public
                 date: "January 13, 2023",
                 body: "Constants and Variables need to start with the \"let\" and \"var\" keywords respectively. Constants cannot be changed after being set (immutable) while variables can be changed (mutable).",
-                codeSnippet: codeSnippet
+                codeSnippet: codeSnippet1
             )
         }
         .margin([.top], 48)
