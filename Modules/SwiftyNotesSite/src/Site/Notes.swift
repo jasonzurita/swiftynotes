@@ -1,4 +1,5 @@
 import SwiftHtmlCss
+import Foundation
 
 struct SiteNotes: HtmlProvider {
     let html: HtmlNode
@@ -9,6 +10,12 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
+        let d = Date()
+        if #available(macOS 12.0, *) {
+            let x = d.formatted(date: .long, time: .omitted)
+        } else {
+            print("No date formatting")
+        }
 
         let codeSnippet1 = codeSnippet(withName: "2023_1_13_constants_and_variables.swift")
         let codeSnippet2 = codeSnippet(withName: "2023_1_20_deferred_constant_assignment.swift")
@@ -17,11 +24,11 @@ struct SiteNotes: HtmlProvider {
         html =
         Div {
             SiteNote(
-                title: "Defer assigning a \"let\" and avoid using \"var\"s",
+                title: #"Defer assigning a "let" and avoid using "var"s"#,
                 // TODO: make it this dynamic based on note date
                 // TODO: look at date before making note public
                 date: "January 20, 2023",
-                body: "Constants (i.e., \"let\"s) can have a deferred assignment (aka definite initialization) as long as the compiler can guarantee that it is assigned in every code path and only once. Useful to avoid using a \"var\", and a safer pattern to use since a constant can't be changed later.",
+                body: #"Constants (i.e., "let"s) can have a deferred assignment (aka definite initialization) as long as the compiler can guarantee that it is assigned in every code path and only once. Useful to avoid using a "var", and a safer pattern to use since a constant can't be changed later."#,
                 codeSnippet: codeSnippet2
             )
             SiteNote(
@@ -29,7 +36,7 @@ struct SiteNotes: HtmlProvider {
                 // TODO: make it this dynamic based on note date
                 // TODO: look at date before making note public
                 date: "January 13, 2023",
-                body: "Constants and Variables need to start with the \"let\" and \"var\" keywords respectively. Constants cannot be changed after being set (immutable) while variables can be changed (mutable).",
+                body: #"Constants and Variables need to start with the "let" and "var" keywords respectively. Constants cannot be changed after being set (immutable) while variables can be changed (mutable)."#,
                 codeSnippet: codeSnippet1
             )
         }
