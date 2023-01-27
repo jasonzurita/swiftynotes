@@ -9,13 +9,21 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
-
-        let codeSnippet1 = codeSnippet(withName: "2023_1_13_constants_and_variables.swift")
+        let codeSnippet3 = codeSnippet(withName: "2023_1_27_point-free_style.swift")
         let codeSnippet2 = codeSnippet(withName: "2023_1_20_deferred_constant_assignment.swift")
+        let codeSnippet1 = codeSnippet(withName: "2023_1_13_constants_and_variables.swift")
 
         // TODO: where should the title and body live?
         html =
         Div {
+            SiteNote(
+                title: "Using key paths for a cleaner style (point-free notation)",
+                // TODO: make it this dynamic based on note date
+                // TODO: look at date before making note public
+                date: "January 27, 2023",
+                body: #"We can make code a little cleaner by using point-free style. This means that we avoid referring to the value in a function (aka a "point"). Key paths let us use this style since they allow us to access a nested property."#,
+                codeSnippet: codeSnippet3
+            )
             SiteNote(
                 title: #"Defer assigning a "let" and avoid using "var"s"#,
                 // TODO: make it this dynamic based on note date
