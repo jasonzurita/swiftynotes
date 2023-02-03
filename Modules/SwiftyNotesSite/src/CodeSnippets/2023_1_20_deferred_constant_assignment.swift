@@ -1,7 +1,7 @@
 import Foundation
 
 enum Route {
-    case url (URL)
+    case url(URL)
     case fallback
 }
 
