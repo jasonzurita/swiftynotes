@@ -9,6 +9,7 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
+        let codeSnippet4 = codeSnippet(withName: "2023_2_3_looping_an_array_with_enumerated.swift")
         let codeSnippet3 = codeSnippet(withName: "2023_1_27_point-free_style.swift")
         let codeSnippet2 = codeSnippet(withName: "2023_1_20_deferred_constant_assignment.swift")
         let codeSnippet1 = codeSnippet(withName: "2023_1_13_constants_and_variables.swift")
@@ -16,6 +17,15 @@ struct SiteNotes: HtmlProvider {
         // TODO: where should the title and body live?
         html =
         Div {
+            SiteNote(
+                title: "Looping through an array with an index",
+                date: "February 2, 2023",
+                body: #"""
+                Using `.enumerated()` on an array will return a pair of index & element for use in each iteration of the loop.<br><br>
+                Note: Not all collections use zero-based and integer indicies. For example, if you have a set, then `.enumerated()` won't function the same. There isn't an order to sets. In this case, the "index" mentioned above is more of a "counter" for an undefined order.
+                """#,
+                codeSnippet: codeSnippet4
+            )
             SiteNote(
                 title: "Using key paths for a cleaner style (point-free notation)",
                 // TODO: make it this dynamic based on note date
