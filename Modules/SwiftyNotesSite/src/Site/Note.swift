@@ -17,7 +17,7 @@ struct SiteNote: HtmlProvider {
                 P(body)
                 Pre {
                     Code {
-                        // FIXME: this is a hack. The code snippet is html, so it shouldn't be embedded in anythign.
+                        // FIXME: this is a hack. The code snippet is html, so it shouldn't be embedded in anything.
                         P(codeSnippet)
                             .padding(0)
                             .margin(0)
