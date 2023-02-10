@@ -9,6 +9,7 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
+        let codeSnippet5 = codeSnippet(withName: "2023_2_10_the_guard_statement.swift")
         let codeSnippet4 = codeSnippet(withName: "2023_2_3_looping_an_array_with_enumerated.swift")
         let codeSnippet3 = codeSnippet(withName: "2023_1_27_point-free_style.swift")
         let codeSnippet2 = codeSnippet(withName: "2023_1_20_deferred_constant_assignment.swift")
@@ -17,6 +18,14 @@ struct SiteNotes: HtmlProvider {
         // TODO: where should the title and body live?
         html =
             Div {
+                SiteNote(
+                    title: #"Prefer "guard" statements for early returns"#,
+                    date: "February 10, 2023",
+                    body: """
+                    The guard statement allows execution to continue if the condition provided is met, or early returns if that condition is not met. Using a guard, we can easily know by inspection that a statement may return early, and therefore better understand the control flow. This is because the compiler "checks" and enforces an early return for guard statements.
+                    """,
+                    codeSnippet: codeSnippet5
+                )
                 SiteNote(
                     title: "Looping through an array with an index",
                     date: "February 2, 2023",
