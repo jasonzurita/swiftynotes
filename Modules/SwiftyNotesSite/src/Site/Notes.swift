@@ -9,6 +9,7 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
+        let codeSnippet6 = codeSnippet(withName: "2023_2_17_using_map_on_optional.swift")
         let codeSnippet5 = codeSnippet(withName: "2023_2_10_the_guard_statement.swift")
         let codeSnippet4 = codeSnippet(withName: "2023_2_3_looping_an_array_with_enumerated.swift")
         let codeSnippet3 = codeSnippet(withName: "2023_1_27_point-free_style.swift")
@@ -18,6 +19,14 @@ struct SiteNotes: HtmlProvider {
         // TODO: where should the title and body live?
         html =
             Div {
+                SiteNote(
+                    title: #"Terser code by using optional's "map""#,
+                    date: "February 17, 2023",
+                    body: #"""
+                    If you need to transform an optional when the value exists, making use of the higher order "map" function on optionals will make your code shorter and clearer. The map function on optional will apply a function to transform a value if it exists, then pack it back up in an optional.
+                    """#,
+                    codeSnippet: codeSnippet6
+                )
                 SiteNote(
                     title: #"Prefer "guard" statements for early returns"#,
                     date: "February 10, 2023",
