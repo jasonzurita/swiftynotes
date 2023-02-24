@@ -9,6 +9,7 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
+        let codeSnippet7 = codeSnippet(withName: "2023_2_24_if_case_let_syntax.swift")
         let codeSnippet6 = codeSnippet(withName: "2023_2_17_using_map_on_optional.swift")
         let codeSnippet5 = codeSnippet(withName: "2023_2_10_the_guard_statement.swift")
         let codeSnippet4 = codeSnippet(withName: "2023_2_3_looping_an_array_with_enumerated.swift")
@@ -19,6 +20,14 @@ struct SiteNotes: HtmlProvider {
         // TODO: where should the title and body live?
         html =
             Div {
+                SiteNote(
+                    title: "Getting an enum's associated using an if statement",
+                    date: "February 17, 2023",
+                    body: #"""
+                    As an alternative to a full switch statement to match an enum and get an enum's associated value out, a regular if statement can be used for a single case at a time. This is handy to know, but the "if statement" syntax to check an enum and get its associated value is tricky and hard to remember. Is it "if case let variable = enum" or "if let case enum = variable" or...?
+                    """#,
+                    codeSnippet: codeSnippet7
+                )
                 SiteNote(
                     title: #"Terser code by using optional's "map""#,
                     date: "February 17, 2023",
