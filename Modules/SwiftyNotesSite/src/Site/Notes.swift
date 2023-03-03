@@ -9,6 +9,7 @@ struct SiteNotes: HtmlProvider {
         // - Derive the date from the file names
         // - Generate code snippets
 
+        let codeSnippet8 = codeSnippet(withName: "2023_3_3_implicit_error_in_catch_block.swift")
         let codeSnippet7 = codeSnippet(withName: "2023_2_24_if_case_let_syntax.swift")
         let codeSnippet6 = codeSnippet(withName: "2023_2_17_using_map_on_optional.swift")
         let codeSnippet5 = codeSnippet(withName: "2023_2_10_the_guard_statement.swift")
@@ -20,6 +21,14 @@ struct SiteNotes: HtmlProvider {
         // TODO: where should the title and body live?
         html =
             Div {
+                SiteNote(
+                    title: "Implicit \"error\" in catch blocks",
+                    date: "March 3, 2023",
+                    body: #"""
+                    When you have a do/try/catch, there is an implicit error available in the "catch block" that can be used to better understand what went wrong. That local implicit error can also be explicitly named if desired.
+                    """#,
+                    codeSnippet: codeSnippet8
+                )
                 SiteNote(
                     title: "Getting an enum's associated value using an if statement",
                     date: "February 17, 2023",
