@@ -1,0 +1,7 @@
+{
+   "title":"Prefer \"guard\" statements for early returns",
+   "body":"The guard statement allows execution to continue if the condition provided is met, or early returns if that condition is not met. Using a guard, we can easily know by inspection that a statement may return early, and therefore better understand the control flow. This is because the compiler \"checks\" and enforces an early return for guard statements.",
+   "tags":[
+      "basic",
+   ]
+}

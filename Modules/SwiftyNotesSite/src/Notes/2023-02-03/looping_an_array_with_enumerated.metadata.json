@@ -1,0 +1,7 @@
+{
+   "title":"Looping through an array with an index",
+   "body":"Using `.enumerated()` on an array will return a pair of index & element for use in each iteration of the loop.<br><br>Note: Not all collections use zero-based and integer indicies. For example, if you have a set, then `.enumerated()` won't function the same. There isn't an order to sets. In this case, the \"index\" mentioned above is more of a \"counter\" for an undefined order.",
+   "tags":[
+      "basic",
+   ]
+}

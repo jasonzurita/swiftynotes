@@ -1,0 +1,7 @@
+{
+   "title":"Implicit \"error\" in catch blocks",
+   "body":"When you have a do/try/catch, there is an implicit error available in the \"catch block\" that can be used to better understand what went wrong. That local implicit error can also be explicitly named if desired.",
+   "tags":[
+      "basic",
+   ]
+}

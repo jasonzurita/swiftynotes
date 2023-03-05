@@ -1,0 +1,7 @@
+{
+   "title":"Defer assigning a \"let\" and avoid using \"var\"s",
+   "body":"Constants (i.e., \"let\"s) can have a deferred assignment (aka definite initialization) as long as the compiler can guarantee that it is assigned in every code path and only once. Useful to avoid using a \"var\", and a safer pattern to use since a constant can't be changed later.",
+   "tags":[
+      "basic",
+   ]
+}

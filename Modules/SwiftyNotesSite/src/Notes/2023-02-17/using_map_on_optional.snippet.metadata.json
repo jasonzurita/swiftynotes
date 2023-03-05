@@ -1,0 +1,7 @@
+{
+   "title":"Terser code by using optional's \"map\"",
+   "body":"If you need to transform an optional when the value exists, making use of the higher order \"map\" function on optionals will make your code shorter and clearer. The map function on optional will apply a function to transform a value if it exists, then pack it back up in an optional.",
+   "tags":[
+      "intermediate",
+   ]
+}

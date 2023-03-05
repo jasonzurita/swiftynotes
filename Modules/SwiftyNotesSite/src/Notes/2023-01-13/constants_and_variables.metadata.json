@@ -1,0 +1,7 @@
+{
+   "title":"Defining Constants and Variables",
+   "body":"Constants and Variables need to start with the \"let\" and \"var\" keywords respectively. Constants cannot be changed after being set (immutable) while variables can be changed (mutable).",
+   "tags":[
+      "basic",
+   ]
+}

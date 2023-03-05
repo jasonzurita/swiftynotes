@@ -1,0 +1,7 @@
+{
+   "title":"Using key paths for a cleaner style (point-free notation)",
+   "body":"We can make code a little cleaner by using point-free style. This means that we avoid referring to the value in a function (aka a \"point\"). Key paths let us use this style since they allow us to access a nested property.",
+   "tags":[
+      "advanced",
+   ]
+}
