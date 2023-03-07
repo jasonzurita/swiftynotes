@@ -4,18 +4,23 @@ import Foundation
 let siteDirectory = FileManager.default.currentDirectoryPath + "/_site"
 let outputFilePath = siteDirectory + "/index.html"
 
-print("Generating site...")
+print("🛠️  Starting to generate the site...")
 
-let html = renderHtml() // This is a free function from this  module
+do {
+    print("🔍 Collecting all notes...")
+    let allNotes = try allNotes()
+    print("📦 Collected all notes!")
 
-if let data = html.data(using: .utf8) {
-    do {
+    print("🖍️  Generating HTML...")
+    let html = renderHtml(usingNotes: allNotes) // This is a free function from this module
+    if let data = html.data(using: .utf8) {
         try data.write(to: URL(fileURLWithPath: outputFilePath), options: [])
-        print("Success!")
-    } catch {
-        print("[FAILURE] - Failed to write to: \(outputFilePath)")
+        print("🚀 Finished generating site! Output is in: \(siteDirectory)")
+    } else {
+        print("❌ Failed to write generated site out to: \(outputFilePath)")
+        exit(1)
     }
-} else {
-    print("[FAILURE] - Failed to convert html to data")
+} catch {
+    print("❌ Failed to build and generate site. Error: \(error)")
     exit(1)
 }

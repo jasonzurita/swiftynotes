@@ -3,13 +3,13 @@ import SwiftHtmlCss
 
 // TODO: custom style guide for code
 
-func renderHtml() -> String {
+func renderHtml(usingNotes notes: [NoteMetadata]) -> String {
     let site =
         Html {
             Head(title: "SwiftyNotes", cssStyleFileName: "CodeColors.css")
             Body {
                 SiteHeader()
-                SiteNotes()
+                SiteNotes(using: notes)
                 Footer {
                     P("Jason Zurita &copy; 2023 | Built in Swift and ") {
                         A(copy: "open source.", url: "https://github.com/jasonzurita/swiftynotes")

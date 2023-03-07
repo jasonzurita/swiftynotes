@@ -1,24 +1,28 @@
+import Foundation
 import SwiftHtmlCss
 
 struct SiteNote: HtmlProvider {
     let html: HtmlNode
 
     // TODO: take in date type
-    init(title: String, date: String, body: String, codeSnippet: String) {
+    init(_ metadata: NoteMetadata) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM d, yyyy"
+
         html =
             Div {
                 Div {
-                    H1(title)
-                    P(date)
+                    H1(metadata.title)
+                    P(dateFormatter.string(from: metadata.date))
                         .color(.mediumGray)
                 }
                 .padding([.bottom], 8)
                 .lineHeight(0.5)
-                P(body)
+                P(metadata.body)
                 Pre {
                     Code {
                         // FIXME: this is a hack. The code snippet is html, so it shouldn't be embedded in anything.
-                        P(codeSnippet)
+                        P(metadata.codeSnippetHtml)
                             .padding(0)
                             .margin(0)
                     }
