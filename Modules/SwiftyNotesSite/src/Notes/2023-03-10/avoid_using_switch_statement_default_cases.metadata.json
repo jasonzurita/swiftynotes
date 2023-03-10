@@ -1,0 +1,7 @@
+{
+   "title":"Avoid using switch statement \"default\" cases with enums",
+   "body":"One way to get the most out of enums in Swift is taking advantage of exhaustive switch statement checking. The compiler can check to ensure all cases are handled in a switch statement. This means if you add another case to an enum, the compiler will \"guide\" you through addressing that case addition by raising errors where that new case isn't handled. Using a \"default\" will silently handle that new enum case, which may not be what you want.",
+   "tags":[
+      "basic",
+   ]
+}
