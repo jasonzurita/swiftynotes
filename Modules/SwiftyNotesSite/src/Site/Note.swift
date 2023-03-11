@@ -13,12 +13,17 @@ struct SiteNote: HtmlProvider {
             Div {
                 Div {
                     H1(metadata.title)
+                        .lineHeight(1.0)
+                        .margin([.bottom], 0)
                     P(dateFormatter.string(from: metadata.date))
                         .color(.mediumGray)
+                        .margin([.top, .bottom], 0)
+                        .padding([.top], 3)
                 }
-                .padding([.bottom], 8)
-                .lineHeight(0.5)
+                .padding([.bottom], 3)
+
                 P(metadata.body)
+
                 Pre {
                     Code {
                         // FIXME: this is a hack. The code snippet is html, so it shouldn't be embedded in anything.
