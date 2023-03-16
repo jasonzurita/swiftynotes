@@ -7,11 +7,19 @@
 
 ---
 
-SwiftyNotes is a [website](https://swiftynotes.com), built using the [Swift programming language](https://www.swift.org), to provide quick _idiomatic tips_ on the Swift language—aka writing _Swifty_ code (yes, Swifty is a real term used). This repo contains the code that powers the website.
+SwiftyNotes is a [website](https://swiftynotes.com), built using the [Swift programming language](https://www.swift.org), to provide quick _idiomatic tips_ on the Swift language—aka writing _Swifty_ code (yes, Swifty is a real term used). This repo contains the code that generates the website. There are some pretty nerdy things in here to check out such as the fact that the code snippets are 100% valid Swift that are compiled before the site is generated.
 
 I've learned so much from the Swift community. My hope is to give a little back with this project.
 
-Contributions of any kind are most welcome. Even feel free to contribute a new _tip_ 🤓.
+Contributions of any kind are most welcome. Even feel free to [contribute a new tip](#contribute-a-tip) 🤓.
+
+## Contribute a Tip
+If interested, create a pull request (PR) with a tip of your own! The below sections will help you get started with the code base, but here are the high level steps to contribute a new tip.
+1. Create a new folder in the [Notes](./Modules/SwiftyNotesSite/src/Notes) folder named with the date to publish your tip (format: yyyy-mm-dd).
+1. Add the tip's metadata json file. This is the content for the tip (e.g., title and body). [Here is an example](./Modules/SwiftyNotesSite/src/Notes/2023-02-24/if_case_let_syntax.snippet.metadata.json).
+1. Add the tip's code snippet. This needs to be valid Swift code and should compliment the metadata above. [Here is an example](./Modules/SwiftyNotesSite/src/Notes/2023-02-24/if_case_let_syntax.snippet.swift).
+1. Make sure your tip is generated as expected by following the below [getting started](#getting-started) guide.
+1. Make a PR with your new tip!
 
 ## Getting Started
 To test out the SwiftyNotes website locally
