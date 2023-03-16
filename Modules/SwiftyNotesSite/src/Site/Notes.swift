@@ -6,10 +6,11 @@ struct SiteNotes: HtmlProvider {
     init(using notes: [NoteMetadata]) {
         html =
             Div {
-                // TODO: look at date before making note public
                 // FIXME: no force try here
                 for note in notes {
-                    SiteNote(note)
+                    if note.date.timeIntervalSinceNow <= 0 {
+                        SiteNote(note)
+                    }
                 }
             }
             .margin([.top], 48)
