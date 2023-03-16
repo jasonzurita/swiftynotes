@@ -4,7 +4,6 @@ import SwiftHtmlCss
 struct SiteNote: HtmlProvider {
     let html: HtmlNode
 
-    // TODO: take in date type
     init(_ metadata: NoteMetadata) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM d, yyyy"
