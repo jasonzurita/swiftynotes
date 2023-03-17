@@ -1,0 +1,7 @@
+{
+   "title":"The Optional type is actually an enum + syntactic sugar",
+   "body":"Optionals are a powerful language construct that force us to address if something exists or not, but did you know that it's just an enum with two cases behind the scenes?",
+   "tags":[
+      "basic",
+   ]
+}
