@@ -1,0 +1,7 @@
+{
+   "title":"Ways to get the first element from an Array",
+   "body":"Swift offers different ways to get the first element from an array depending on what you want to accomplish. For example, we can remove the first item from an array while returning it for use.",
+   "tags":[
+      "basic",
+   ]
+}
