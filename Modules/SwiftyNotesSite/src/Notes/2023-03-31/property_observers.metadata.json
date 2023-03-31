@@ -1,0 +1,7 @@
+{
+   "title":"Use property observers to \"tap\" into a property's lifecycle",
+   "body":"The \"willSet\" and \"didSet\" property observers will get called every time a property is changed. This allows you react to changes in a property's value. E.g., saving that value to disk each time it is changed. They are not called on init however.",
+   "tags":[
+      "intermediate",
+   ]
+}
