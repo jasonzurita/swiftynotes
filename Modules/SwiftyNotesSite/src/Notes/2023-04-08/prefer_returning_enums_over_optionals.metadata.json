@@ -1,0 +1,7 @@
+{
+   "title":"Prefer returning enums (even simple ones) over nil",
+   "body":"Optionals are great, however information can be lost when used to represent the absence of something. An enum with as few as two cases can be very useful in conveying why something is missing, and is more accomidating in the future as things change.",
+   "tags":[
+      "intermediate",
+   ]
+}
