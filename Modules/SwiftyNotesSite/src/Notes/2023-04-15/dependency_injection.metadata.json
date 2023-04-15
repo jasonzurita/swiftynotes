@@ -1,0 +1,7 @@
+{
+   "title":"Intro to dependency injection (it's not that scary)",
+   "body":"This can be a \"scary\" subject/phrase, but it really boils down to something quite simple and nice: Give your entities (e.g., classes, structs, functions) what they \"need\" to do their job. You \"give\" your entities what they \"need\" via functions like initializers. If you do, reasoning about your code, writing tests, and future support will be much easier.",
+   "tags":[
+      "intermediate",
+   ]
+}
