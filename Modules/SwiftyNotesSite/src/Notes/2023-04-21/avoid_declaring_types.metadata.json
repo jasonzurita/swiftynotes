@@ -1,0 +1,7 @@
+{
+   "title":"Avoid declaring types if they can be inferred",
+   "body":"Swift's type system is powerful. As long as the type on the right hand side can be inferred, you can leave off the type from the left when declaring a constant or variable.",
+   "tags":[
+      "basic",
+   ]
+}
