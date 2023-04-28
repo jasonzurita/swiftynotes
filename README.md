@@ -68,6 +68,6 @@ Html {
 This module consumes the above HTML eDSL module. The result is a fully Swift defined site along with styling. When `swift run` is invoked, this module runs as an executable and [generates HTML](https://github.com/jasonzurita/swiftynotes/blob/5e0c0d977e13b0b3c995b44df63c152c7a759f43/Modules/SwiftyNotesSite/src/main.swift#L9) that is ready to be statically hosted and consumed by browsers.
 
 #### Deployment
-The website is hosted on [CloudFlare pages](https://pages.cloudflare.com) as a static website. When a new commit is _pushed_ to the main branch, CloudFlare runs a `swift run` and takes the output generated HTML and hosts it. Pretty much that simple.
+The SwiftyNotes site is hosted using [CloudFlare pages](https://pages.cloudflare.com) as a static website. When a new commit is _pushed_ to the main branch, [GitHub Actions](./.github/workflows/publish.yml) runs the tests, builds the website, and then uploads the generated site (in the `_site` directory) to CloudFlare to host it. Pretty much that simple.
 
 
