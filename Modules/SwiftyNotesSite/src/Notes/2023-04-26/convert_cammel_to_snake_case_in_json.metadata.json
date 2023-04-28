@@ -1,0 +1,7 @@
+{
+   "title":"Generating JSON: Convert camel case to snake case",
+   "body":"A lot of backend APIs expect JSON to use snake case (e.g., \"user_id\"), but the Swift convention is to use camel case (e.g. \"userId\"). Turns out there is a simple way to convert between the two when generating JSON.",
+   "tags":[
+      "intermediate",
+   ]
+}
