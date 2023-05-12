@@ -1,0 +1,7 @@
+{
+   "title":"Providing a default value when accessing a dictionary",
+   "body":"The typical way to get values out of a dictionary is via subscript using the dictionary's \"key.\" This access method returns an optional value in return since the key may not exist. If you want a \"fallback\" value when the key doesn't exist, you can provide default value for that situation in the subscript. Also in this case, you don't have to deal with the returned value being wrapped in an optional!",
+   "tags":[
+      "basic",
+   ]
+}
