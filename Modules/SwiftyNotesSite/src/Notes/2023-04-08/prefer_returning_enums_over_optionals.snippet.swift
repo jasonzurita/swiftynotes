@@ -5,7 +5,7 @@ struct Stats {}
 func stats(for profile: Profile) -> Stats? {
     // Get stats (e.g., database, network, cache)
     // If the above fails, the returned value of nil hides why
-    return nil
+    nil
 }
 
 // Preferred - Using an enum helps convey more information
@@ -20,5 +20,5 @@ enum RetrievedStats {
 
 func stats(for profile: Profile) -> RetrievedStats {
     // Get stats (e.g., database, network, cache)
-    return .noneFound
+    .noneFound
 }

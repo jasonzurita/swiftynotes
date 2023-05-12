@@ -14,7 +14,7 @@ public enum HtmlBuilder {
     // Also, `AnyElement` is used below because the type doesn't make much of a
     // difference at this point.
     public static func buildArray(_ components: [[HtmlNode]]) -> [HtmlProvider] {
-        return components.flatMap { $0 }.map {
+        components.flatMap { $0 }.map {
             switch $0 {
             case let .element(element, attrs: attrs, copy, nodes):
                 return AnyElement(
@@ -31,17 +31,17 @@ public enum HtmlBuilder {
     // for this result builders, which is an array of HtmlProviders. See the note
     // in `buildBlock` above for its input.
     public static func buildExpression(_ expression: HtmlProvider) -> [HtmlProvider] {
-        return [expression]
+        [expression]
     }
 
     // This makes it so we can use an array literal
     public static func buildExpression(_ expression: [HtmlProvider]) -> [HtmlProvider] {
-        return expression
+        expression
     }
 
     // if/else statement support
     public static func buildEither(first component: [HtmlNode]) -> [HtmlProvider] {
-        return component.map {
+        component.map {
             switch $0 {
             case let .element(element, attrs: attrs, copy, nodes):
                 return AnyElement(
@@ -56,7 +56,7 @@ public enum HtmlBuilder {
 
     // if/else statement support
     public static func buildEither(second component: [HtmlNode]) -> [HtmlProvider] {
-        return component.map {
+        component.map {
             switch $0 {
             case let .element(element, attrs: attrs, copy, nodes):
                 return AnyElement(

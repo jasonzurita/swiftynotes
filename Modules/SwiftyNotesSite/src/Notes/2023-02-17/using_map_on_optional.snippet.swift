@@ -1,6 +1,6 @@
 // Without using "map"
 func upperCase(userInput input: String?) -> String? {
-    if let input = input {
+    if let input {
         return input.uppercased()
     }
     return nil

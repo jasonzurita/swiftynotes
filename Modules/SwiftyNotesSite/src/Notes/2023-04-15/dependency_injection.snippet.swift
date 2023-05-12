@@ -11,5 +11,5 @@ func time(fromNow now: () -> Date, to event: Event) -> TimeInterval {
     // returned time interval, and create a reliable test for the internals here.
 
     // Calculate the time interval
-    return .zero
+    .zero
 }

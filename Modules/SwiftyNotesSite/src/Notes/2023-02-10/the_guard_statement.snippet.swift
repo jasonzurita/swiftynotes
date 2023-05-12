@@ -6,7 +6,7 @@ func isPasswordValid(_ password: String?) throws -> Bool {
 
     // Throwing is a possible way to guarantee an early exit (if the function is throwing)
     // If password isn't nil, the guard passes and unwraps "password" to be used as non-optional
-    guard let password = password else { throw PasswordValidation.invalidAndUnknown }
+    guard let password else { throw PasswordValidation.invalidAndUnknown }
 
     // These guards provide boolean early returns (per the return type of this function)
     guard password.isEmpty else { return false }
