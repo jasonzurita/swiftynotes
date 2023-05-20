@@ -1,0 +1,7 @@
+{
+   "title":"Getting random values",
+   "body":"Swift ships with several ways to get random values ranging from picking a number within a range to random within an array that you've defined.",
+   "tags":[
+      "basic",
+   ]
+}
