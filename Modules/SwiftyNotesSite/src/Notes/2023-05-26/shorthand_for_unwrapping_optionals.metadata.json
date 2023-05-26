@@ -1,0 +1,7 @@
+{
+   "title":"Shorthand for unwrapping optional values",
+   "body":"As of Swift 5.7, there is a new shorthand for unwrapping optional values for later use.",
+   "tags":[
+      "basic",
+   ]
+}
