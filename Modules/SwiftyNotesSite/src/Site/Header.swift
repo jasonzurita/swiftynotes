@@ -10,7 +10,7 @@ struct SiteHeader: HtmlProvider {
                 .color(.white)
             Div {
                 // TODO: pull the swift value in from .swift-version
-                P("Updated for Swift 5.8")
+                P("Updated for Swift 5.9")
             }
             .textAlign(.right)
             .color(.lightGray)

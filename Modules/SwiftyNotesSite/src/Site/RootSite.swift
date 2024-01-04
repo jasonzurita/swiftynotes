@@ -11,7 +11,7 @@ func renderHtml(usingNotes notes: [NoteMetadata]) -> String {
                 SiteHeader()
                 SiteNotes(using: notes)
                 Footer {
-                    P("Jason Zurita &copy; 2023 | Built in Swift and ") {
+                    P("Jason Zurita &copy; 2024 | Built in Swift and ") {
                         A(copy: "open source.", url: "https://github.com/jasonzurita/swiftynotes")
                     }
                 }
