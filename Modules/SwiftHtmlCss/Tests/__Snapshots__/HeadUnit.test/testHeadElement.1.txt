@@ -1,4 +1,0 @@
-<head>
-     <title>test-title</title>
-<link href="fake.css" rel="stylesheet"></link>
-</head>

@@ -1,4 +1,4 @@
-import SwiftHtmlCss
+import SwiftWebsiteDSL
 
 struct SiteHeader: HtmlProvider {
     public let html: HtmlNode = {

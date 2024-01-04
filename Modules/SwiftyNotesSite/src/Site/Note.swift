@@ -1,5 +1,5 @@
 import Foundation
-import SwiftHtmlCss
+import SwiftWebsiteDSL
 
 struct SiteNote: HtmlProvider {
     let html: HtmlNode

@@ -1,1 +1,0 @@
-<fake-element style="color: #123456;"></fake-element>

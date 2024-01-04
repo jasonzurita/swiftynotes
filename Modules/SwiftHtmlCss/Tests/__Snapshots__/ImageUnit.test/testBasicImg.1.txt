@@ -1,1 +1,0 @@
-<img alt="alt required string" src="images/logo.png"></img>

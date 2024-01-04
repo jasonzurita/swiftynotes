@@ -1,4 +1,4 @@
-// Usage: Go to root directory then `swift run Local-Website`
+// Usage: Go to root directory then `swift run`
 import Foundation
 
 let siteDirectory = FileManager.default.currentDirectoryPath + "/_site"

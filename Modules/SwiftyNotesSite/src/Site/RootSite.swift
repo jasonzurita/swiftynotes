@@ -1,5 +1,5 @@
 import Splash
-import SwiftHtmlCss
+import SwiftWebsiteDSL
 
 // TODO: custom style guide for code
 

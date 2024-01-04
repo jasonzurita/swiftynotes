@@ -1,3 +1,0 @@
-<pre><div>
-     <p>ooo, nested twice</p>
-</div></pre>

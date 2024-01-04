@@ -1,1 +1,0 @@
-<fake-background-linear-gradient-element style="background: linear-gradient(77deg,#ASDFGH 4%,#QWERTY 99%);"></fake-background-linear-gradient-element>

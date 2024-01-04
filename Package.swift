@@ -9,30 +9,20 @@ let package = Package(
     ],
     dependencies: [
         .package(
+            url: "https://github.com/jasonzurita/swift-website-dsl.git",
+            from: "1.0.0"
+        ),
+        .package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
             from: "1.10.0"
         ),
         .package(url: "https://github.com/JohnSundell/Splash", from: "0.1.0"),
     ],
     targets: [
-        .target(
-            name: "SwiftHtmlCss",
-            dependencies: [],
-            path: "Modules/SwiftHtmlCss/src"
-        ),
-        .testTarget(
-            name: "SwiftHtmlCssTests",
-            dependencies: [
-                "SwiftHtmlCss",
-                .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
-            ],
-            path: "Modules/SwiftHtmlCss/Tests",
-            exclude: ["__Snapshots__"]
-        ),
         .executableTarget(
             name: "SwiftyNotesSite",
             dependencies: [
-                "SwiftHtmlCss",
+                .product(name: "SwiftWebsiteDSL", package: "swift-website-dsl"),
                 "Splash",
             ],
             path: "Modules/SwiftyNotesSite/src"

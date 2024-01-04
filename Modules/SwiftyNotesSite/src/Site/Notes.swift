@@ -1,4 +1,4 @@
-import SwiftHtmlCss
+import SwiftWebsiteDSL
 
 struct SiteNotes: HtmlProvider {
     let html: HtmlNode
