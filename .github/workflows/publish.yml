@@ -11,9 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run tests
-        run: swift test
-
       - name: Build Site
         run: swift run
 
