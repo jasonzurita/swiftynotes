@@ -1,0 +1,7 @@
+{
+  "title":"Shorthand for tighter optional unwraps",
+  "body":"As of Swift 5.7, you no longer need to specify the name of the target optional you want to unwrap and the name of the result. Instead, if the desired target and result share the same name, you can remove the \"=\" and use a single name to define both target and result.\n\nNote: You cannot unwrap properties on an optional object (e.g. if let item?.price { /* Code */ }), where item is optional, will not work.",
+  "tags":[
+     "basic",
+  ]
+}
